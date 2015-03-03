@@ -1,2 +1,2 @@
 # scrubsending
-emails sending for scrubs
+email sending for scrubs
