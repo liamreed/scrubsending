@@ -1,0 +1,27 @@
+<div class="container">
+    <form id="orderForm" class="form-horizontal" action="scripts/mail/send.php" method="post">
+      <fieldset>
+        <legend>Send Email</legend>
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <div class="col-lg-10">
+            <input name="emailAddress" type="text" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="textArea" class="col-lg-2 control-label">Message</label>
+          <div class="col-lg-10">
+            <textarea name="emailBody" class="form-control" rows="3" id="textArea"></textarea>
+            <span class="help-block"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-1 col-lg-offset-11">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </fieldset>
+    <div id="sendSuccess" class="alert alert-success" role="alert" hidden="true"><strong>Thanks!</strong>Your order inquiry has been sent!</div>
+    <div id="sendError" class="alert alert-error" role="alert" hidden="true"><strong>Oops!</strong>Your inquiry cannot be sent at the moment</div>
+    </form>
+    </div>
