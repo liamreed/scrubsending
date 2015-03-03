@@ -25,3 +25,23 @@
     <div id="sendError" class="alert alert-error" role="alert" hidden="true"><strong>Oops!</strong>Your inquiry cannot be sent at the moment</div>
     </form>
     </div>
+    
+    <script>
+            $(function() {
+                $("#orderForm").on("submit", function(e) {
+                    e.preventDefault();
+                    $.ajax({
+                        url: $(this).attr("action"),
+                        type: 'POST',
+                        data: $(this).serialize(),
+                        success: function(data) {
+                            $("#sendSuccess").show();
+                        },
+                        error: function( jqXhr, textStatus, errorThrown ){
+                            console.log( errorThrown );
+                            $("#sendError").show();
+                        }
+                    });
+                });
+            });
+        </script>
