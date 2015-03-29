@@ -1,2 +1,2 @@
 # scrubsending
-email sending for scrubs
+how to send email in php via smtp
